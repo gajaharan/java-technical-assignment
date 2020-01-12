@@ -23,7 +23,7 @@ public class BuyThreeForTwoPromotion implements Promotion{
                 .filter(x -> x.barCode().equals(this.barCode))
                 .count();
 
-        long discountTimes = items.size() / 3;
+        long discountTimes = itemCount / 3;
 
         BigDecimal savings = items.get(0).price().multiply(new BigDecimal(discountTimes));
 

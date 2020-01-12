@@ -1,6 +1,7 @@
 package kata.supermarket.calculator;
 
 import kata.supermarket.item.Item;
+import kata.supermarket.promotion.BuyThreeForTwoPromotion;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
@@ -30,7 +31,8 @@ public class TotalCalculator implements Calculator {
      * which provides that functionality.
      */
     private BigDecimal discounts() {
-        return BigDecimal.ZERO;
+        BuyThreeForTwoPromotion buyThreeForTwoPromotion = new BuyThreeForTwoPromotion("Milk");
+        return buyThreeForTwoPromotion.applyPromotion(this.items);
     }
 
     @Override

@@ -32,7 +32,8 @@ class BasketTest {
                 aSingleItemPricedPerUnit(),
                 multipleItemsPricedPerUnit(),
                 aSingleItemPricedByWeight(),
-                multipleItemsPricedByWeight()
+                multipleItemsPricedByWeight(),
+                multipleItemsThreeForTwoPromotion()
         );
     }
 
@@ -57,6 +58,16 @@ class BasketTest {
 
     private static Arguments noItems() {
         return Arguments.of("no items", "0.00", Collections.emptyList());
+    }
+
+    private static Arguments multipleItemsThreeForTwoPromotion() {
+        return Arguments.of("multiple items priced per unit", "0.98",
+                Arrays.asList(aPintOfMilk(), aPintOfMilk(), aPintOfMilk()));
+    }
+
+    private static Arguments multipleItemsWithOddItemThreeForTwoPromotion() {
+        return Arguments.of("multiple items priced per unit", "2.53",
+                Arrays.asList(aPintOfMilk(), aPintOfMilk(), aPackOfDigestives(), aPintOfMilk()));
     }
 
     private static Item aPintOfMilk() {
