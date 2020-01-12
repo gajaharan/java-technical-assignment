@@ -13,11 +13,19 @@
         <junit.version>5.5.2</junit.version>
         <assertj.core.version>3.12.2</assertj.core.version>
         <mockito.core.version>3.0.0</mockito.core.version>
+        <common.collections.version>4.4</common.collections.version>
     </properties>
 
     <dependencies>
         <!-- Please mention in NOTES.md your rationale for any dependencies you add here -->
 
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-collections4</artifactId>
+            <version>${common.collections.version}</version>
+        </dependency>
+
+        <!-- Testing -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
