@@ -15,4 +15,8 @@ public class ItemByUnit implements Item {
     public BigDecimal price() {
         return product.pricePerUnit();
     }
+
+    public String barCode() {
+        return product.getBarcode();
+    }
 }

@@ -8,8 +8,10 @@ import java.math.BigDecimal;
 public class Product {
 
     private final BigDecimal pricePerUnit;
+    private final String barcode;
 
-    public Product(final BigDecimal pricePerUnit) {
+    public Product(final String barcode, final BigDecimal pricePerUnit) {
+        this.barcode = barcode;
         this.pricePerUnit = pricePerUnit;
     }
 
@@ -19,5 +21,9 @@ public class Product {
 
     public Item oneOf() {
         return new ItemByUnit(this);
+    }
+
+    public String getBarcode() {
+        return barcode;
     }
 }

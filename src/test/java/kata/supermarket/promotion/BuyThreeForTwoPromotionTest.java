@@ -17,7 +17,7 @@ public class BuyThreeForTwoPromotionTest {
 
     @Before
     public void setup() {
-        buyThreeForTwoPromotion = new BuyThreeForTwoPromotion();
+        buyThreeForTwoPromotion = new BuyThreeForTwoPromotion("Milk");
     }
 
     @Test
@@ -56,11 +56,11 @@ public class BuyThreeForTwoPromotionTest {
     }
 
     private static Item aPintOfMilk() {
-        return new Product(new BigDecimal("0.49")).oneOf();
+        return new Product("Milk", new BigDecimal("0.49")).oneOf();
     }
 
     private static Item aPackOfDigestives() {
-        return new Product( new BigDecimal("1.55")).oneOf();
+        return new Product("Digestives", new BigDecimal("1.55")).oneOf();
     }
 
 }

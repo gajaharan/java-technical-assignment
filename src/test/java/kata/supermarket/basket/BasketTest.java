@@ -1,6 +1,5 @@
 package kata.supermarket.basket;
 
-import kata.supermarket.basket.Basket;
 import kata.supermarket.item.Item;
 import kata.supermarket.product.Product;
 import kata.supermarket.product.WeighedProduct;
@@ -61,11 +60,11 @@ class BasketTest {
     }
 
     private static Item aPintOfMilk() {
-        return new Product(new BigDecimal("0.49")).oneOf();
+        return new Product("Milk", new BigDecimal("0.49")).oneOf();
     }
 
     private static Item aPackOfDigestives() {
-        return new Product(new BigDecimal("1.55")).oneOf();
+        return new Product("Digestives", new BigDecimal("1.55")).oneOf();
     }
 
     private static WeighedProduct aKiloOfAmericanSweets() {
