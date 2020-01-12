@@ -14,6 +14,10 @@ public class BuyThreeForTwoPromotion implements Promotion{
             return BigDecimal.ZERO;
         }
 
-        return BigDecimal.ZERO;
+        long discountTimes = items.size() / 3;
+
+        BigDecimal savings = items.get(0).price().multiply(new BigDecimal(discountTimes));
+
+        return savings;
     }
 }
